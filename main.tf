@@ -1,4 +1,11 @@
 terraform {
+    cloud {
+    organization = "test_qwr"
+
+    workspaces {
+      name = "BTS-demo"
+    }
+  }
 
   required_providers {
     aws = {
