@@ -19,13 +19,11 @@ provider "aws" {
   region = var.aws_region
 }
 
-module "s3_bucket" {
-  source  = "terraform-aws-modules/s3-bucket/aws"
-  version = "5.12.0"
+resource "aws_instance" "my_ec2" {
+  ami           = "ami-0c02fb55956c7d316"
+  instance_type = "t2.micro"
 
-  bucket = "demo-bucket-${var.suffix}"
-
-  versioning = {
-    enabled = true
+  tags = {
+    Name = "My-Terraform-EC2"
   }
 }
