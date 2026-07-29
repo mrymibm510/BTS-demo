@@ -4,5 +4,11 @@ variable "aws_region" {
 
 variable "suffix" {
   type    = string
-  default = "mshahid-072826-a1"
+  default = "mshahid-072826-a13"
+}
+
+variable "AWS_ACCESS_KEY_ID" {
+  description = "AWS Access Key ID"
+  type        = string
+  sensitive   = true
 }
