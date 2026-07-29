@@ -19,15 +19,13 @@ provider "aws" {
   region = var.aws_region
 }
 
-data "aws_ssm_parameter" "amazon_linux" {
-  name = "/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64"
-}
 
-resource "aws_instance" "my_ec2" {
-  ami           = data.aws_ssm_parameter.amazon_linux.value
-  instance_type = "t2.micro"
+resource "aws_s3_bucket" "example" {
+  bucket = "mxsbucket987" 
 
   tags = {
-    Name = "My-Terraform-EC2"
+    Name        = "MyDemoBucket"
+    Environment = "dev"
+    ManagedBy   = "Terraform"
   }
 }
