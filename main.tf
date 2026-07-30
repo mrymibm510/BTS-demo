@@ -1,9 +1,9 @@
 terraform {
     cloud {
-    organization = "test_qwr"
+    organization = "hashicorp-ddr-platform-prod"
 
     workspaces {
-      name = "BTS-demo"
+      name = "BTS-demo-CLI"
     }
   }
 
