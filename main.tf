@@ -3,7 +3,7 @@ terraform {
     organization = "hashicorp-ddr-platform-prod"
 
     workspaces {
-      name = "BTS-demo-CLI"
+      name = "BTS-demo"
     }
   }
 
