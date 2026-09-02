@@ -38,3 +38,12 @@ resource "aws_s3_bucket" "bucket2" {
     ManagedBy   = "Terraform"
   }
 }
+resource "aws_s3_bucket" "bucket3" {
+  bucket = "mxsbucket120" 
+
+  tags = {
+    Name        = "MyDemoBucket2"
+    Environment = "dev"
+    ManagedBy   = "Terraform"
+  }
+}
