@@ -19,7 +19,6 @@ provider "aws" {
   region = var.aws_region
 }
 
-
 resource "aws_s3_bucket" "example" {
   bucket = "mxsbucket987" 
 
@@ -31,15 +30,6 @@ resource "aws_s3_bucket" "example" {
 }
 resource "aws_s3_bucket" "bucket2" {
   bucket = "mxsbucket9874" 
-
-  tags = {
-    Name        = "MyDemoBucket2"
-    Environment = "dev"
-    ManagedBy   = "Terraform"
-  }
-}
-resource "aws_s3_bucket" "bucket3" {
-  bucket = "mxsbucket120" 
 
   tags = {
     Name        = "MyDemoBucket2"
